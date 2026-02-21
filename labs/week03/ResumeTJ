@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trinity Jones | Resume</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        h2 {
+            color: darkgreen;
+            border-bottom: 2px solid lightgray;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: darkred;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .contact {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .skills ul {
+            columns: 2;
+        }
+
+        a {
+            color: purple;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Trinity Jones</h1>
+
+    <div class="contact">
+        <p>Email: trinityjones@email.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>
+            LinkedIn: 
+            <a href="https://www.linkedin.com" target="_blank">linkedin.com/in/trinityjones</a>
+        </p>
+        <p>
+            GitHub: 
+            <a href="https://github.com" target="_blank">github.com/trinityjones</a>
+        </p>
+    </div>
+
+    <h2>Education</h2>
+    <h3>Texas A&M University</h3>
+    <p>Bachelor of Science in Environmental Geoscience</p>
+    <p>Master of Science in Ocean Science and Technology</p>
+
+    <h2>Experience</h2>
+    <h3>Environmental Research Assistant</h3>
+    <h4>Texas A&M University</h4>
+    <p>
+        Conducted groundwater contamination research focusing on E. coli 
+        presence in Texas aquifers. Assisted with data collection, GIS mapping,
+        and statistical analysis.
+    </p>
+
+    <h3>Survey Enumerator</h3>
+    <p>
+        Collected and organized field data, ensured data accuracy,
+        and communicated effectively with diverse populations.
+    </p>
+
+    <h2>Skills</h2>
+    <div class="skills">
+        <ul>
+            <li>GIS Mapping (ArcGIS)</li>
+            <li>Data Analysis</li>
+            <li>Oceanographic Research</li>
+            <li>Field Sampling</li>
+            <li>HTML & CSS</li>
+            <li>Microsoft Office Suite</li>
+            <li>Technical Writing</li>
+            <li>Team Collaboration</li>
+        </ul>
+    </div>
+
+    <h2>Professional Summary</h2>
+    <p>
+        Motivated Environmental Geoscience graduate student with strong 
+        analytical skills and experience in oceanographic and environmental 
+        research. Passionate about sustainability, data-driven decision making,
+        and environmental problem-solving.
+    </p>
+
+</div>
+
+</body>
+</html>
