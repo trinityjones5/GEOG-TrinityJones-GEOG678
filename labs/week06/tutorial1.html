@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tutorial 1 - GeoJSON</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"/>
+
+  <style>
+    #mapid {
+      height: 600px;
+      width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>GeoJSON Example</h1>
+<div id="mapid"></div>
+
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+
+<script>
+var map = L.map('mapid').setView([39.74739, -106], 4);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19
+}).addTo(map);
+
+// POINT
+var myPoint = {
+  "type": "Feature",
+  "properties": {
+    "name": "Coors Field",
+    "popupContent": "Baseball Stadium"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-104.99404, 39.75621]
+  }
+};
+
+L.geoJSON(myPoint, {
+  onEachFeature: function(feature, layer) {
+    layer.bindPopup(feature.properties.popupContent);
+  }
+}).addTo(map);
+
+// LINE
+var myLine = {
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [[-100, 40], [-105, 45], [-110, 55]]
+  }
+};
+
+L.geoJSON(myLine, {
+  style: {color: "blue"}
+}).addTo(map);
+
+// POLYGON
+var myPoly = {
+  "type": "Feature",
+  "properties": {"party": "Republican"},
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[
+      [-104.05, 48.99],
+      [-97.22, 48.98],
+      [-96.58, 45.94],
+      [-104.03, 45.94],
+      [-104.05, 48.99]
+    ]]
+  }
+};
+
+L.geoJSON(myPoly, {
+  style: {color: "red"}
+}).addTo(map);
+
+</script>
+
+</body>
+</html>
