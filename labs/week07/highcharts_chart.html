@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Highcharts Temperature Chart</title>
+
+    <!-- Highcharts Libraries -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <style>
+        #container {
+            width: 80%;
+            height: 400px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2 style="text-align:center;">
+    College Station Weekly Temperature Forecast (Highcharts)
+</h2>
+
+<div id="container"></div>
+
+<script>
+Highcharts.chart('container', {
+
+    title: {
+        text: 'Weekly Temperature Forecast'
+    },
+
+    xAxis: {
+        categories: ['Sat','Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+    },
+
+    yAxis: {
+        title: {
+            text: 'Temperature (°F)'
+        }
+    },
+
+    series: [
+    {
+        name: 'High',
+        data: [82,81,81,70,77,78,79,80]
+    },
+    {
+        name: 'Low',
+        data: [67,59,50,47,51,60,66,66]
+    }
+    ]
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D3 Temperature Chart</title>
+
+    <!-- D3 Library -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        #chart div {
+            background-color: steelblue;
+            color: white;
+            padding: 5px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>College Station Weekly Temperature Forecast (D3)</h2>
+
+<div id="chart"></div>
+
+<script>
+    // Temperature Data (Highs)
+    var data = [82, 81, 81, 70, 77, 78, 79, 80];
+
+    d3.select("#chart")
+        .selectAll("div")
+        .data(data)
+        .enter()
+        .append("div")
+        .style("width", function(d) { return d * 5 + "px"; })
+        .text(function(d) { return d + " °F"; });
+</script>
+
+</body>
+</html>
